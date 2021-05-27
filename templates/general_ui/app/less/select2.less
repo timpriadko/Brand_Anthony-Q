@@ -1,0 +1,67 @@
+.select2 {
+    width: 100% !important;
+    height: 38px;
+}
+.select2-container {
+    &--default {
+        .select2-selection--single {
+            border: none;
+            border-radius: 0;
+            height: 100%;
+            border-bottom: 1px solid #8d8d8d;
+            box-shadow: 0 1px 0 0 #e5e5e5;
+            display: flex;
+            align-items: center;
+        }
+        .select2-selection__rendered {
+            color: #262626;
+        }
+        .select2-results {
+            & >.select2-results__options {
+                // &:first-of-type {
+                //     display: none;
+                // }
+            }
+        }
+    }
+    &--open {
+        .select2-selection {
+            &--single {
+                border-left: 1px solid #8d8d8d;
+                border-right: 1px solid #8d8d8d;
+                height: 38px;
+            }
+        }
+    }
+    .select2-selection {
+        &--single {
+            .select2-selection {
+                &__rendered {
+                    padding-right: 15px;
+                    padding-left: 23px;
+                    font-size: 11px;
+                    line-height: 18px;
+                    letter-spacing: .01em;
+                    color: #777;
+                }
+                &__arrow {
+                    position: absolute;
+                    content: "";
+                    bottom: 9px;
+                    left: 2px;
+                    top: unset;
+                    right: unset;
+                    b {
+                        border: none;
+                        width: 10px;
+                        height: 11px;
+                        background: url(../img/arrow.svg);
+                        background-position: 0;
+                        background-size: 10px 10px;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
