@@ -3,7 +3,7 @@
 
 .user-form {
   padding: 0 5px;
-  margin-top: 19px;
+  margin-top: 40px;
 
   fieldset {
 
@@ -28,6 +28,7 @@
   width: 100%;
   margin: auto;
   padding: 0;
+  margin-top: 18px;
 
   &.fullwidth {
     & > * {
@@ -44,9 +45,12 @@
       flex: 1 1 80px;
     }
 
-    & > div:nth-of-type(1) {
-      flex-basis: 58%;
-      margin-right: 10px;
+    & > * {
+      max-width: 47%;
+
+      & + * {
+        margin-top: 0 !important;
+      }
     }
   }
 }
@@ -187,7 +191,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           font-size: 0px;
-          background-image: url('../img/checkmark-green.svg');
+          background-image: url('../img/checkmark_2.svg');
           background-size: contain;
           background-repeat: no-repeat;
           transition: .3s;
@@ -209,8 +213,8 @@
           border-color: #7C8186;
 
           &:after {
-            width: 13px;
-            height: 11px;
+            width: 19px;
+            height: 16px;
             transition: .3s;
           }
         }
@@ -238,9 +242,9 @@
           
           & + label {
             border-radius: 0;
-            border: 1px solid @gray_2;
-            width: 25px;
-            height: 25px;
+            border: 1px solid @black;
+            width: 40px;
+            height: 40px;
           }
         }
       }
@@ -290,12 +294,13 @@
 }
 
 .input-gray_bg {
+
   input {
-    min-height: 58px;
+    min-height: 50px;
     display: flex;
     align-items: center;
-    padding: 8px;
-    border: 1px solid @gray_2;
+    padding: 8px 15px;
+    border: 1px solid @black;
     
     &::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */

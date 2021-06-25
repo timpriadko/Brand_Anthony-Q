@@ -3,16 +3,35 @@
 @font-face {
   font-family: 'Helvetica Neue';
   src: url('../fonts/HelveticaNeue.ttf');
-  src: url('/fonts/HelveticaNeue.ttf') format('truetype');
+  src: url('../fonts/HelveticaNeue.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Impact';
-  src: url('../fonts/Impact.ttf');
-  src: url('/fonts/Impact.ttf') format('truetype');
+  src: url('../fonts/Impact/impact-webfont.woff2') format('woff2'),
+  url('../fonts/Impact/impact-webfont.woff') format('woff'),
+  url('../fonts/Impact/Impact.otf') format('opentype');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/poppins-medium-webfont.woff2') format('woff2'),
+  url('../fonts/Poppins/poppins-medium-webfont.woff') format('woff'),
+  url('../fonts/Poppins/poppins-medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/poppins-bold-webfont.woff2') format('woff2'),
+  url('../fonts/Poppins/poppins-bold-webfont.woff') format('woff'),
+  url('../fonts/Poppins/poppins-bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -25,9 +44,6 @@
 }
 
 // fonts
-// @base_font: "Mallory Light Regular", sans-serif;
-// @base_font_bold: "Mallory Bold Regular", sans-serif;
-// @secondary_font: "Mallory Book Regular", sans-serif;
 @base_font: 'Helvetica Neue', sans-serif;
 @secondary_font: 'Poppins', sans-serif;
 @third_font: "Impact", sans-serif;
@@ -114,6 +130,7 @@ p {
   }
   &.big {
     font-size: 16px;
+    font-family: @secondary_font;
   }
 }
 ul {
@@ -133,7 +150,7 @@ input:not([type='submit']) {
   height: 43px;
   padding: 15px 0 0 0;
   font-size: 16px;
-  font-family: @base_font;
+  font-family: @secondary_font;
   background: transparent;
   border: none;
   border-bottom: 1px solid @main_black;
@@ -156,7 +173,6 @@ label {
   display: block;
   font-size: 19px;
   letter-spacing: 0.32px;
-  line-height: 70px;
 
   input {
     display: none !important;
